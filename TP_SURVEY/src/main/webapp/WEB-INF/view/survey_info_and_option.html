@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- <meta/>에 content 속성값에 shrink-to-fit=no 추가 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
 
     <!-- Bootstrap CSS -->
@@ -16,6 +18,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
+        .h-50
+        {
+            height: 50px;
+        }
+        .h-150
+        {
+            height: 150px;
+        }
         .wd-50
         {
           width: 25px;
@@ -81,6 +91,10 @@
             width: 450px;
             border-left-color: transparent;
         }
+        .container .next
+        {
+            text-align: center;
+        }
       </style>
       <script>
         $.datepicker.setDefaults
@@ -101,15 +115,17 @@
             $('.datepicker').datepicker();
         })
       </script>
-    <title>설문조사 등록(관리자용)</title>
+      <script src="https://kit.fontawesome.com/8e8e06ef00.js" crossorigin="anonymous"></script>
+    <title>설문조사 등록 1 (관리자용)</title>
   </head>
   <body>
+    <!-- Header(Navigation Bar) 적용을 위한 공백 추가 -->
+    <div class="h-150"></div> 
+    <div class="container">
         <form>
-            <div class="container"></div>
             <div class="container h-50">
                 <h3><strong>신규생성</strong></h3>
-            <div class="row" style="text-align:center;">
-                <div class="col">    
+                <div class="row" style="text-align:center;">
                     <div class="step">
                         <table>
                             <ul>
@@ -121,8 +137,8 @@
                                 <span class="m-10"><img src="https://www.letsmobile.co.kr/biz/static/images/survey/ic-step.png" alt=""></span>
                                 <li><class="step-last"><img src="https://www.letsmobile.co.kr/biz/static/images/survey/ic-step-finish.png" alt="신규생성 완료"> 신규생성 완료</li>
                             </ul>
-                        </table>            
-                    </div>
+                        </table>
+                    </div>            
                 </div>
             </div>
             <div class="container"></div>
@@ -149,7 +165,7 @@
                     <td style="text-align:center;">~</td>
                     <td>
                         <div>
-                            <input class="datepicker" id="surveyEndDate" name="surveyEndDate" before="2022-10-03" label="설문종료일" data-role="calendarpicker"type="text"/>
+                            <input class="datepicker" id="endDate" name="endDate" before="2022-10-03" label="설문종료일" data-role="calendarpicker"type="text"/>
                             <select id="endHour" name="endHour" before="23">
                                 <option value="00">00</option><option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23" selected="selected">23</option>
                             </select>
@@ -189,7 +205,8 @@
                 </tr>
             </table>
             <br>
-            <div style="text-align: center;"><input type="submit" value="다음"></div>
+            <div class="container" style="text-align: center;"><button type="button" class="btn btn-primary">다음</button></div>
         </form>
+    </div>
   </body>
 </html>
