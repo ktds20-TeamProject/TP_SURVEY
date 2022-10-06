@@ -36,7 +36,7 @@
 
 </script>
 
-<title>Survey_result_multipleTable</title>
+<title>Survey_result_multiple</title>
 </head>
 <body>
     <!--질문 기본정보-->
