@@ -11,12 +11,13 @@
     <!-- jQuery가 먼저 로드 된 후 datepicker가 로드 되어야함.-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
     <link rel="stylesheet" href="resources/css/plugin/datepicker/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <script src="resources/js/plugin/datepicker/bootstrap-datepicker.js"></script>
     <style>
-    #container{
-     margin-top:350px;
+    #container
+    {
+     margin-top:150px;
     }
     #admin_btn{
     border: 3px solid black; height:300px; width:300px;
@@ -31,7 +32,6 @@
 <title>메인</title>
 </head>
 <body>
-<%@ include file="./commons/header.jsp" %>
   <div id="container" class="container">
     <div class="row">
    	  <div class="col-md-6 col-sm-12 text-center">
@@ -44,4 +44,3 @@
   </div>
 </body>
 </html>
-<%@ include file="./commons/footer.jsp" %>
